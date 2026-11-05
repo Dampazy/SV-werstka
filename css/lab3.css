@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.information{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.scene{
+    overflow: hidden;
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(white, #55d5df);
+    border: 3px solid black;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.man-frame{
+    opacity: 0;
+    position: absolute;
+    left: 45px;
+    bottom: 5px;
+    height: 150px;
+    width: auto;
+}
+
+.man-na-meste{
+    opacity: 1;
+}
+
+.scene-text{
+    position: absolute;
+    left: 8px;
+    top: 10px;
+     
+    font-size: 16px;
+    opacity: 0;
+}
+
+.zvezda-path{
+    width: 45px;
+    height: 45px;
+    z-index: 11;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    opacity: 0;
+}
+
+.zvezda{
+    width: 100%;
+    height: 100%;
+}
+
+.scene:hover .scene-text{
+    opacity: 1;
+}
+
+.scene:hover .zvezda-path{
+    opacity: 1;
+}
+
+@keyframes frame-one {
+    0%{
+        opacity: 1;
+    }
+    33.3%{
+        opacity: 0;
+    }
+    66.6%{
+        opacity: 0;
+    }
+}
+
+.scene:hover .man-na-meste {
+  animation: frame-one 1.0s steps(1, end) infinite;
+}
+
+@keyframes frame-two {
+    0%{
+        opacity: 0;
+    }
+    33.3%{
+        opacity: 1;
+    }
+    66.6%{
+        opacity: 0;
+    }
+}
+
+.scene:hover .man-idet-2 {
+  animation: frame-two 1.0s steps(1, end) infinite;
+}
+
+@keyframes frame-three {
+    0%{
+        opacity: 0;
+    }
+    33.3%{
+        opacity: 0;
+    }
+    66.6%{
+        opacity: 1;
+    }
+}
+
+.scene:hover .man-idet-3 {
+  animation: frame-three 1.0s steps(1, end) infinite;
+}
+
+@keyframes zvezda-spin{
+    0%{
+        transform: rotate(0deg);
+    } 
+    25%{
+        transform: rotate(90deg);
+    }  
+    50%{
+        transform: rotate(180deg);
+    }  
+    75%{
+        transform: rotate(270deg);
+    } 
+    100%{
+        transform: rotate(360deg);
+    }      
+}
+
+.zvezda-path:hover .zvezda{
+    animation: zvezda-spin 1.0s linear infinite;
+}
+
+.zvezda-motion{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes zvezda-dvigat {
+    0%{
+        transform: translate(0px, 0px);
+    } 
+    33%{
+        transform: translate(-40px, 40px);
+    }  
+    66%{
+        transform: translate(30px, 40px);
+    }  
+    100%{
+        transform: translate(0px, 0px);
+    }        
+}
+
+.zvezda-path:hover .zvezda-motion{
+    animation: zvezda-dvigat 2.0s linear infinite;
+}
+
+.final-text{
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.brusher{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+
+.click-area {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.click-toggle {
+  display: none;
+}
+
+.click-toggle:checked + .scene .brusher,
+.click-toggle:checked + .scene .final-text {
+  opacity: 1;
+}
+
+.click-toggle:checked + .scene .scene-text {
+  opacity: 0;
+}
+
+.click-toggle:checked + .scene .man-frame{
+    animation: none;
+}
+
+.click-toggle:checked + .scene .zvezda-path{
+    opacity: 0;
+}
+
+@keyframes brush-gaz{
+    0%{
+        transform: translate(0, 0) rotate(-20deg);
+    }
+    25%{
+        transform: translate(35px, -15px) rotate(10deg);
+    }
+    50%{
+        transform: translate(75px, 0) rotate(-10deg);
+    }
+    75%{
+        transform: translate(110px, -15px) rotate(10deg);
+    }
+    100%{
+        transform: translate(150px, 0) rotate(-20deg);
+    }
+}
+
+.click-toggle:checked + .scene .brusher{
+    animation: brush-gaz 1s linear infinite;
+}
+
+@keyframes scene-pulse {
+    100%{
+        transform: scale(0.95);
+    }
+    50%{
+        transform: scale(1.2);
+    }    
+}
+
+.click-toggle:checked + .scene{
+    animation: scene-pulse 1.5s linear infinite;
+}
+
+.pravila{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+

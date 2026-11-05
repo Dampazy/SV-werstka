@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/png" href="images/logo-sv.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lab2.css">
+
+    <title>Лабораторная №2 </title>
+
+    <style>
+      .lab-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lab-page main {
+        flex: 1;
+      }
+
+      .lab-page .footer {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+  <body class="lab-page">
+    <header class="header">
+      <div class="header-content">
+      <a class="logo" href="index.html#top">
+        <span class="logo-house">СВ</span>
+
+        <span class="logo-text">
+          СТРОИМ<br>
+          ВМЕСТЕ
+        </span>
+      </a>
+
+      <nav>
+        <ul class="main-menu">
+          <li class="labs">
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-menu">
+              <span></span><span></span><span></span>
+            </button>
+
+            <ul class="labs-menu" id="header-menu" hidden>
+              <li><a href="lab2.html">Лабораторная №2</a></li>
+              <li><a href="lab3.html">Лабораторная №3</a></li>
+              <li><a href="lab4.html">Лабораторная №4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="information">
+        <div class="FIO-var">
+          <h2>Выполнил: Вангонен Артем</h2>
+          <p>Вариант: 2</p>
+        </div>
+      </section>
+
+      <section class="task-content">
+        <h2>Композиция</h2>
+
+        <div
+          class="picture"
+          role="img"
+          aria-label="Стол с чайником, два стула, картина и солнце"
+        >
+          <span class="frame-loops frame-loops-top" aria-hidden="true"></span>
+          <span class="frame-loops frame-loops-right" aria-hidden="true"></span>
+          <span
+            class="frame-loops frame-loops-bottom"
+            aria-hidden="true"
+          ></span>
+          <span class="frame-loops frame-loops-left" aria-hidden="true"></span>
+
+          <div class="wall-picture">
+            <div class="sun"></div>
+            <div class="teapot">
+              <span class="teapot-spout"></span>
+              <span class="teapot-handle"></span>
+              <span class="teapot-lid"></span>
+              <span class="teapot-body"></span>
+            </div>
+          </div>
+
+          <div class="chair chair-left">
+            <span class="chair-back"></span>
+            <span class="chair-seat"></span>
+            <span class="chair-leg"></span>
+          </div>
+
+          <div class="table">
+            <span class="table-top"></span>
+            <span class="table-leg"></span>
+            <span class="table-base"></span>
+          </div>
+
+          <div class="chair chair-right">
+            <span class="chair-back"></span>
+            <span class="chair-seat"></span>
+            <span class="chair-leg"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="ftr-name">
+        СТРОИМ ВМЕСТЕ · СПБ · Вангонен Артем · учебный проект
+      </span>
+    </footer>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>

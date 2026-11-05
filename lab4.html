@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/png" href="images/logo-sv.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/quiz-behavior.css">
+    <link rel="stylesheet" href="css/lab4.css">
+
+    <title>Лабораторная №4 </title>
+
+    <style>
+      .lab-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lab-page main {
+        flex: 1;
+      }
+
+      .lab-page .footer {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+  <body class="lab-page">
+    <header class="header">
+      <div class="header-content">
+      <a class="logo" href="index.html#top">
+        <span class="logo-house">СВ</span>
+
+        <span class="logo-text">
+          СТРОИМ<br>
+          ВМЕСТЕ
+        </span>
+      </a>
+
+      <nav>
+        <ul class="main-menu">
+          <li class="labs">
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-menu">
+              <span></span><span></span><span></span>
+            </button>
+
+            <ul class="labs-menu" id="header-menu" hidden>
+              <li><a href="lab2.html">Лабораторная №2</a></li>
+              <li><a href="lab3.html">Лабораторная №3</a></li>
+              <li><a href="lab4.html">Лабораторная №4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="quiz-information">
+        <h1>Проверьте свою грамотность</h1>
+        <p class="who-made">Выполнил: Вангонен Артем<br>Вариант: 3</p>
+        <p class="insruksia">Пять вопросов о русском языке. Если ответ один — нажмите на него для проверки. Если ответов несколько — отметьте варианты и нажмите «Проверить ответ». После проверки переходите к следующему вопросу. После завершения нажмите на любой пройденный вопрос для просмотра правильных ответов.</p>
+
+        <div class="quiz-controls">
+          <button class="test-start" type="button">Начать тест</button>
+          <button class="test-restart" type="button" hidden>Пройти заново</button>
+        </div>
+        <p class="quiz-progress" role="status">0 из 5</p>
+        
+        <div class="quiz-result" role="status" hidden></div>
+        <div class="questions"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span class="ftr-name">СТРОИМ ВМЕСТЕ · СПБ · Вангонен Артем · учебный проект</span>
+    </footer>
+
+    <script src="js/quiz.js" defer></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

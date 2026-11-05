@@ -1,0 +1,15 @@
+
+.quiz-information { box-sizing: border-box; min-width: 0; }
+.quiz-information [hidden] { display: none; }
+.questions { display: flex; flex-wrap: nowrap; gap: 20px; overflow-x: auto; padding: 12px 8px 24px; align-items: flex-start; }
+.question-card { flex: 0 0 320px; min-width: 0; max-width: 100%; }
+.answers { overflow: hidden; padding: 8px; }
+.answer-button { display: block; box-sizing: border-box; width: 100%; white-space: normal; transition: background-color .2s, transform .2s; }
+.answer-button:hover:not(:disabled), .question-title:hover:not(:disabled) { background-color: #e5e7eb; }
+.answer-button.selected, .answer-button:active:not(:disabled) { outline: 2px solid #ca4831; outline-offset: -2px; }
+.answer-button.correct { transform: scale(1.03); }
+.answer-explanation { display: block; }
+.marker-correct { color: #287a32; }
+.marker-wrong { color: #b52d2d; }
+.answer-button.leaving { animation: quiz-leave-down .45s ease-in forwards; }
+@keyframes quiz-leave-down { to { transform: translateY(140px); opacity: 0; } }

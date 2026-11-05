@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/png" href="images/logo-sv.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lab3.css">
+
+    <title>Лабораторная №3 </title>
+
+    <style>
+      .lab-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lab-page main {
+        flex: 1;
+      }
+
+      .lab-page .footer {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+  <body class="lab-page">
+    <header class="header">
+      <div class="header-content">
+      <a class="logo" href="index.html#top">
+        <span class="logo-house">СВ</span>
+
+        <span class="logo-text">
+          СТРОИМ<br>
+          ВМЕСТЕ
+        </span>
+      </a>
+
+      <nav>
+        <ul class="main-menu">
+          <li class="labs">
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-menu">
+              <span></span><span></span><span></span>
+            </button>
+
+            <ul class="labs-menu" id="header-menu" hidden>
+              <li><a href="lab2.html">Лабораторная №2</a></li>
+              <li><a href="lab3.html">Лабораторная №3</a></li>
+              <li><a href="lab4.html">Лабораторная №4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+    <section class="information">
+        <div class="FIO-var">
+          <h2>Выполнил: Вангонен Артем</h2>
+          <p>Вариант: 1</p>
+        </div>
+    </section>
+
+    <div class="gallery">
+      <div class="clip">
+        <input type="checkbox" class="click-toggle" id="clip-1">
+
+          <div class="scene">
+            <label class="click-area" for="clip-1"></label>
+            <div class="walker">
+                <img class="man-frame man-na-meste" src="images/lab3/man1.png" alt="boy-stoit">
+                <img class="man-frame man-idet-2" src="images/lab3/man2.png" alt="boy-idet-2">
+                <img class="man-frame man-idet-3" src="images/lab3/man3.png" alt="boy-idet-3">
+            </div>
+            <p class="scene-text">Иду за мечтой</p>
+            <div class="zvezda-path">
+              <div class="zvezda-motion">
+                <img class="zvezda" src="images/lab3/zvezda.png" alt="zvezda">
+              </div>
+            </div>
+
+            <div class="brush">
+              <img class="brusher" src="images/lab3/brush.png" alt="kistocka">
+            </div>
+            <p class="final-text">Мечта рядом!</p>
+          </div>
+      </div> 
+
+    <section class="pravila">
+      <h2>Управление</h2>
+      <ol>
+        <li>В обычном состоянии художник стоит в кадре.</li>
+        <li>При наведении он идёт, появляется надпись и звезда.</li>
+        <li>При наведении на звезду она движется по траектории.</li>
+        <li>После нажатия появляется кисть и новая фраза.</li>
+      </ol>
+    </section>
+
+    </div>
+    </main>
+
+    <footer class="footer">
+      <span class="ftr-name">
+        СТРОИМ ВМЕСТЕ · СПБ · Вангонен Артем · учебный проект
+      </span>
+    </footer>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
